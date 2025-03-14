@@ -12,13 +12,13 @@ import io.restassured.response.Response;
 
 @Listeners(com.api.listeners.TestListener.class)
 public class LoginAPITest {
-	
-	@Test(description="Verify if Login API is working...")
-	public void loginTest()
-	{
-		/*Rest Assured is a class so we need to create an object ? No, all the methods
-		 and variables are static in nature. This is not a normal class, this is a utility
-		 class
+
+	@Test(description = "Verify if Login API is working...")
+	public void loginTest() {
+		/*
+		 * Rest Assured is a class so we need to create an object ? No, all the methods
+		 * and variables are static in nature. This is not a normal class, this is a
+		 * utility class
 		 */
 //		RestAssured.baseURI = "https://grest.agbe.in";
 //		RequestSpecification rs = RestAssured.given();
@@ -33,9 +33,9 @@ public class LoginAPITest {
 //		
 //		System.out.println("OTP is: "+otp);
 		LoginResponse loginResponse = response.as(LoginResponse.class);
-		
+
 		System.out.println(response.asPrettyString());
-		
+
 	}
 
 }
